@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion : "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Pet Store Rest API Service
+
+Resources:
+  PetStoreApiGateway: 
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      DefinitionUri: ./swagger.yaml
+  PostPetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: PostPetFunction
+      Runtime: python3.6
+      Handler: function.handler
+      CodeUri: ./lambda/postPet/
+      Events:
+        GetPetApi:
+          Type: Api
+          Properties:
+            RestApiId: !Ref "PetStoreApiGateway"
+            Path: /pet
+            Method: POST
+      Policies:
+        - AWSLambdaBasicExecutionRole
+  GetPetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: GetPetFunction
+      Runtime: python3.6
+      Handler: function.handler
+      CodeUri: ./lambda/getPet/
+      Events:
+        GetPetApi:
+          Type: Api
+          Properties:
+            RestApiId: !Ref "PetStoreApiGateway"
+            Path: /pet/{petId}
+            Method: GET
+      Policies:
+        - AWSLambdaBasicExecutionRole
