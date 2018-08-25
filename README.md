@@ -5,9 +5,9 @@ Light-weight sample to show how to use the AWS Serverless Application Model (AWS
 
 ## Pre-requisites
 1. Create an AWS Account [Link](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
-    Take note of your AWS Access Key ID, AWS Secret Access Key and 12-digit account ID
+    - Take note of your AWS Access Key ID, AWS Secret Access Key and 12-digit account ID
 2. Install AWS CLI Commands [Link](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
-    If you don't know which default region name to indicate, just set it to **us-east-1**
+    - If you don't know which default region name to indicate, just set it to **us-east-1**
 3. Configure your local PC [Link](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 4. Install AWS SAM Commands [Link](https://docs.aws.amazon.com/lambda/latest/dg/sam-cli-requirements.html)
 
