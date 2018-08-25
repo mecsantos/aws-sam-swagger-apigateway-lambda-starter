@@ -1,6 +1,8 @@
 # AWS SAM, Swagger, API Gateway, Lambda Starter
 Light-weight sample to show how to use the AWS Serverless Application Model (AWS SAM) to integrate API Gateway to a separate Swagger or OpenAPI file. The demo triggers a lambda function through API gateway, and then returns the parameters passed to it to show that you can acces these parameters inside the lambda function.
 
+![alt text](./architecture.png?raw=true "Architecture")
+
 ## Pre-requisites
 1. Create an AWS Account [Link](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
     Take note of your AWS Access Key ID, AWS Secret Access Key and 12-digit account ID
